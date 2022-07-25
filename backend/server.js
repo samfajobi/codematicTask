@@ -1,6 +1,4 @@
 const express = require("express");
-const dotenv = require("dotenv");
-const mongoose = require("mongoose");
 const cors = require("cors");
 const timezoneRoute = require("./routes/timezone")
 
@@ -18,8 +16,9 @@ app.use(express.json())
 
 app.use("/api/timezone", timezoneRoute)
 
-const PORT = 8080
+const PORT = process.env.PORT || 8080
 
+app.get("/", () => res.send("Welcome to my API"))
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
