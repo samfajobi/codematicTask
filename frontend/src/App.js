@@ -47,7 +47,7 @@ const P = styled.p`
 `
 
 const api = {
-  baseUrl: "http://localhost:8080/api/timezone/"
+  baseUrl: "https://gettimezone.herokuapp.com/api/timezone/"
 
 };
 
