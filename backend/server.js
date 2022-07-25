@@ -18,7 +18,7 @@ app.use("/api/timezone", timezoneRoute)
 
 const PORT = process.env.PORT || 8080
 
-app.get("/", (req, res) => res.send("Welcome to my API"))
+app.get("/", (req, res) => res.send("Welcome to my Time Zone API"))
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`)
