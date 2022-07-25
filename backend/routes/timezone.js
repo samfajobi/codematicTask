@@ -3,9 +3,10 @@ const router = require('express').Router();
 
 
 
-// route - GMT 
+
 router.get(["/", "/:zone"],  (req, res) => {
 
+    // declared variables for all timezones
     const gmt = req.params.zone;
     const cvt = req.params.zone;
     const wat = req.params.zone;
@@ -77,7 +78,7 @@ router.get(["/", "/:zone"],  (req, res) => {
            
         })
     } else {
-        res.status(200).json({error: "The time for the timezone is not available"})
+        res.status(200).json({error: "The time for the timezone you've entered is not available"})
     }
         
     res.status(500).json()

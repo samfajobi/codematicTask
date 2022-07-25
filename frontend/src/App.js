@@ -21,7 +21,8 @@ const Wrapper = styled.div`
   margin-left: 23%;
   padding-top: 10%;
 `
-
+const H3 = styled.h3`
+`
 
 
 const Input = styled.input`
@@ -41,7 +42,7 @@ const P = styled.p`
   color: #fff;
   background-color: rgba(285, 285, 285, 0.2);
   padding: 15px 25px;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
   width: 760px;
 `
@@ -64,7 +65,7 @@ const App = () => {
           .then((result) => {
             setTimeZone(result);
             console.log(result);
-            console.log(timeZone.localZone);
+            console.log(result.error);
             
             setQuery("");
           });
@@ -76,6 +77,7 @@ const App = () => {
   return (
     <Container>
           <Wrapper>
+            <H3>{timeZone.error}</H3>
             <Input
               placeholder="Type in any of the following african time zones (CVT, GMT, WAT, CAT, EAT, MT)"
               type="text"
