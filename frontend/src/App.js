@@ -22,6 +22,12 @@ const Wrapper = styled.div`
   padding-top: 10%;
 `
 const H3 = styled.h3`
+  margin-left: 15%;
+  transition: all 0.3s ease-out;
+  width: 50%;
+  padding: 8px;
+  transform: translateY(10%);
+  
 `
 
 
